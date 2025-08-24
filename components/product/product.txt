@@ -1,0 +1,37 @@
+  <TouchableOpacity
+            key={productID}
+            className='w-[167] h-[282] p-1 mr-2 mb-2 overflow-hidden'
+        >
+            <View className='w-[160] bg-white rounded-xl items-center flex justify-center relative z-90'>
+                <Pressable
+                    onPress={() => {
+                        alert("hi")
+                    }}
+                    className='absolute top-2 right-2 w-[30px] h-[30px] rounded-xl items-center flex justify-center z-10'
+                    style={style.shadow} >
+
+                    <Image
+                        className='w-[14] h-[14] object-fill'
+                        source={require("@/assets/images/heart.png")} />
+                </Pressable>
+                <View className='w-[160] h-[170] rounded-xl items-center flex justify-center z-90'
+                    style={style.shadow}
+                >
+                    <Image
+                        className='w-[140] h-[148]'
+                        source={require("@/assets/images/product.png")}
+                    />
+                </View>
+                <View className='z-90'>
+                    <Text className='font-bold text-xl'>
+                        {price}
+                    </Text>
+                    <Text className='font-bold'>
+                        {productName}
+                    </Text>
+                    <Text className='text-sm'>
+                        Model: {model}, {color}
+                    </Text>
+                </View>
+            </View>
+        </TouchableOpacity>
